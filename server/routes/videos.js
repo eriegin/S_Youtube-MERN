@@ -3,8 +3,10 @@ import {
   addVideo,
   addView,
   deleteVideo,
+  getByTag,
   getVideo,
   random,
+  search,
   sub,
   trend,
   updateVideo,
@@ -52,5 +54,15 @@ router.get("/random", random);
  * Get subscribed video
  */
 router.get("/sub", verifyToken, sub);
+
+/**
+ * Get video by tags
+ */
+router.get("/tags", getByTag);
+
+/**
+ * Get video by query
+ */
+router.get("/search", search);
 
 export default router;
